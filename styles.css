@@ -13,6 +13,7 @@ body {
     animation: bgMove 10s ease infinite;
     overflow-x: hidden;
     color: white;
+    border: 5px solid red;
 }
 
 /* фон анімація */
