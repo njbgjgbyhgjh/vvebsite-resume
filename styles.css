@@ -1,0 +1,218 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #013220, #0b6623, #228b22, #7CFC00);
+    background-size: 300% 300%;
+    animation: bgMove 10s ease infinite;
+    overflow-x: hidden;
+    color: white;
+}
+
+/* фон анімація */
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===== ТЕКСТ ===== */
+h1, h2, p, li, td, strong {
+    color: white;
+    animation: floatText 3s ease-in-out infinite;
+}
+
+/* легкий “плаваючий” ефект */
+@keyframes floatText {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* ===== TITLE ===== */
+#main-title {
+    text-align: center;
+    font-size: 42px;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeDown 1s forwards;
+}
+
+/* підзаголовок */
+h2:first-of-type {
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.3s;
+}
+
+/* ===== СЕКЦІЇ ===== */
+.section {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 50, 20, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: sectionAppear 1s forwards;
+}
+
+    /* затримки */
+    .section:nth-of-type(1) {
+        animation-delay: 0.2s;
+    }
+
+    .section:nth-of-type(2) {
+        animation-delay: 0.4s;
+    }
+
+    .section:nth-of-type(3) {
+        animation-delay: 0.6s;
+    }
+
+    .section:nth-of-type(4) {
+        animation-delay: 0.8s;
+    }
+
+    .section:nth-of-type(5) {
+        animation-delay: 1s;
+    }
+
+    /* заголовки в блоках */
+    .section h2 {
+        border-bottom: 2px solid rgba(255,255,255,0.3);
+        margin-bottom: 15px;
+    }
+
+/* ===== ТЕКСТ ===== */
+p, li {
+    font-size: 18px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+    p:hover, li:hover {
+        color: #7CFC00;
+    }
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* ефект заливки */
+    td::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        transition: 0.5s;
+    }
+
+    td:hover::before {
+        left: 0;
+    }
+
+/* ===== COMMENT ===== */
+.comment {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: sectionAppear 0.8s forwards;
+}
+
+    .comment:hover {
+        transform: scale(1.05);
+        background: rgba(124, 252, 0, 0.3);
+        transition: 0.3s;
+    }
+
+/* ===== АНІМАЦІЇ ===== */
+@keyframes sectionAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+    body h1,
+    body h2,
+    body p,
+    body li,
+    body td,
+    body strong {
+        color: white;
+    }
+
+.light {
+    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #4facfe);
+    background-size: 600% 600%;
+    animation: blueMove 10s ease infinite;
+}
+
+    .light h1,
+    .light h2,
+    .light p,
+    .light li,
+    .light td,
+    .light strong {
+        color: white !important;
+    }
+
+    .light .section {
+        background: rgba(0, 30, 60, 0.6);
+    }
