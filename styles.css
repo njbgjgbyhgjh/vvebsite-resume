@@ -1,11 +1,10 @@
-/* ===== RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: linear-gradient(135deg, #013220, #0b6623, #228b22, #7CFC00);
@@ -16,7 +15,6 @@ body {
     border: 5px solid red;
 }
 
-/* фон анімація */
 @keyframes bgMove {
     0% {
         background-position: 0% 50%;
@@ -31,13 +29,11 @@ body {
     }
 }
 
-/* ===== ТЕКСТ ===== */
 h1, h2, p, li, td, strong {
     color: white;
     animation: floatText 3s ease-in-out infinite;
 }
 
-/* легкий “плаваючий” ефект */
 @keyframes floatText {
     0%,100% {
         transform: translateY(0);
@@ -48,7 +44,6 @@ h1, h2, p, li, td, strong {
     }
 }
 
-/* ===== TITLE ===== */
 #main-title {
     text-align: center;
     font-size: 42px;
@@ -57,7 +52,6 @@ h1, h2, p, li, td, strong {
     animation: fadeDown 1s forwards;
 }
 
-/* підзаголовок */
 h2:first-of-type {
     text-align: center;
     margin-bottom: 30px;
@@ -65,7 +59,6 @@ h2:first-of-type {
     animation: fadeIn 1s forwards 0.3s;
 }
 
-/* ===== СЕКЦІЇ ===== */
 .section {
     width: 70%;
     margin: 20px auto;
@@ -78,7 +71,6 @@ h2:first-of-type {
     animation: sectionAppear 1s forwards;
 }
 
-    /* затримки */
     .section:nth-of-type(1) {
         animation-delay: 0.2s;
     }
@@ -99,13 +91,11 @@ h2:first-of-type {
         animation-delay: 1s;
     }
 
-    /* заголовки в блоках */
     .section h2 {
         border-bottom: 2px solid rgba(255,255,255,0.3);
         margin-bottom: 15px;
     }
-
-/* ===== ТЕКСТ ===== */
+    
 p, li {
     font-size: 18px;
     margin-bottom: 8px;
@@ -116,7 +106,6 @@ p, li {
         color: #7CFC00;
     }
 
-/* ===== TABLE ===== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -129,7 +118,6 @@ td {
     overflow: hidden;
 }
 
-    /* ефект заливки */
     td::before {
         content: "";
         position: absolute;
@@ -145,7 +133,6 @@ td {
         left: 0;
     }
 
-/* ===== COMMENT ===== */
 .comment {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -163,7 +150,6 @@ td {
         transition: 0.3s;
     }
 
-/* ===== АНІМАЦІЇ ===== */
 @keyframes sectionAppear {
     to {
         opacity: 1;
