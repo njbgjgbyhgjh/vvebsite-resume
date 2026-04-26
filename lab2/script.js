@@ -1,4 +1,3 @@
-/* ===== 1. LOCAL STORAGE ===== */
 const info = {
     userAgent: navigator.userAgent,
     platform: navigator.platform,
@@ -24,7 +23,6 @@ for (let key in localStorage) {
     }
 }
 
-/* ===== 2. FETCH КОМЕНТАРІВ ===== */
 fetch("https://jsonplaceholder.typicode.com/posts/24/comments")
     .then(res => res.json())
     .then(data => {
@@ -45,12 +43,9 @@ fetch("https://jsonplaceholder.typicode.com/posts/24/comments")
         });
     });
 
-/* ===== 3. МОДАЛЬНЕ ВІКНО ===== */
 setTimeout(() => {
     document.getElementById("modal").style.display = "block";
 }, 60000);
-
-/* ===== 4. ТЕМА ===== */
 
 const btn = document.getElementById("themeToggle");
 
@@ -58,13 +53,8 @@ btn.onclick = () => {
     document.body.classList.toggle("light");
 };
 
-/* авто по часу */
 const hour = new Date().getHours();
 
-/*
-7–21 → день (синя)
-21–7 → ніч (зелена)
-*/
 if (hour >= 7 && hour < 21) {
     document.body.classList.add("light");
 } else {
